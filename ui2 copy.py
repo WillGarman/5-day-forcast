@@ -17,9 +17,9 @@ import sys
 #from main import get_forcast
 
 
-sunImage = 'D:\\sun_469-removebg-preview.png'
-percipImage = 'D:\\5-57317_water-drop-clipart-png-transparent-png-removebg-preview.png'
-backgroundImage = 'D:\\pictures\\untitled.png'
+sunImage = f'{os.getcwd()}\\images\\sun_469-removebg-preview.png'
+percipImage = f'{os.getcwd()}\\images\\5-57317_water-drop-clipart-png-transparent-png-removebg-preview.png'
+backgroundImage = f'{os.getcwd()}\\images\\untitled.png'
 
 API_KEY = '05a59ce96cb307a4e12ed503a455c1a0'
 
