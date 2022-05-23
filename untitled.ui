@@ -6,9 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>909</width>
+    <width>898</width>
     <height>564</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>898</width>
+    <height>564</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>898</width>
+    <height>564</height>
+   </size>
   </property>
   <property name="palette">
    <palette>
@@ -427,15 +445,16 @@
   </property>
   <property name="font">
    <font>
+    <family>MS Shell Dlg 2</family>
     <weight>75</weight>
     <bold>true</bold>
    </font>
   </property>
   <property name="windowTitle">
-   <string>Forcasting App</string>
+   <string>Forcasting App - Will G</string>
   </property>
   <property name="tabShape">
-   <enum>QTabWidget::Rounded</enum>
+   <enum>QTabWidget::Triangular</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="TitleLabel">
@@ -1827,6 +1846,9 @@ border-radius: 15px;</string>
      <font>
       <pointsize>17</pointsize>
      </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="text">
      <string>99°</string>
@@ -3416,20 +3438,826 @@ border-radius: 15px;</string>
    <zorder>highTempLabel_5</zorder>
    <zorder>percipLevelLabel_5</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>909</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="../test.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>cityTextBrowser</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>361</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>241</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>highTempLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lowTempLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>649</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_image</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>weatherMain</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>637</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipImageLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipLevelLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVImageLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVLabel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>781</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_border</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day2_border</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day2_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>654</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>highTempLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lowTempLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_image_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>600</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>weatherMain_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipImageLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipLevelLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>780</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVImageLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVLabel_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day3_border</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day3_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>highTempLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_image_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>596</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lowTempLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>weatherMain_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>669</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipImageLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipLevelLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>347</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVImageLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVLabel_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>776</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day4_border</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day4_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>337</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>685</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>highTempLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lowTempLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_image_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>598</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>weatherMain_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>637</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipImageLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>746</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipLevelLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>784</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVImageLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>343</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>737</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVLabel_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day5_border</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day5_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>654</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>highTempLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lowTempLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>549</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>day1_image_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>weatherMain_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>635</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipImageLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>361</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>percipLevelLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>452</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVImageLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>756</x>
+     <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UVLabel_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>798</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
