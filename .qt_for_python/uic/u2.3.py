@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'u2.1.ui'
+## Form generated from reading UI file 'u2.3.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -284,7 +284,7 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.infoLabel = QLabel(self.centralwidget)
         self.infoLabel.setObjectName(u"infoLabel")
-        self.infoLabel.setGeometry(QRect(30, 390, 381, 81))
+        self.infoLabel.setGeometry(QRect(30, 390, 381, 131))
         sizePolicy1.setHeightForWidth(self.infoLabel.sizePolicy().hasHeightForWidth())
         self.infoLabel.setSizePolicy(sizePolicy1)
         palette5 = QPalette()

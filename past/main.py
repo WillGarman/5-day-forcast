@@ -34,7 +34,7 @@ def get_forcast(lat, lon):
     day3 = weather_info['daily'][2]
     day4 = weather_info['daily'][3]
     day5 = weather_info['daily'][4]
-    #print(day1)
+    print(day1)
     #print(weather_info)
 
     
