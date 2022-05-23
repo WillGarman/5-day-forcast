@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'u2.ui'
+## Form generated from reading UI file 'u2.1.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(898, 564)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(100)
-        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setVerticalStretch(100)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QSize(898, 564))
