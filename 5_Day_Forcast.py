@@ -15,7 +15,7 @@ import json
 import sys
 from datetime import datetime
 
-#from main import get_forcast
+#from main import get_forecast
 
 
 sunImage = f'{os.getcwd()}\\images\\sun_469-removebg-preview.png'
@@ -523,18 +523,18 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.infoLabel.setFont(font)
                 self.infoLabel.setObjectName("infoLabel")
-                self.forcastWidget = QtWidgets.QWidget(self.centralwidget)
-                self.forcastWidget.setGeometry(QtCore.QRect(460, 20, 421, 511))
-                self.forcastWidget.setObjectName("forcastWidget")
-                self.forcastWidget.hide()
-                self.day3_border = QtWidgets.QLabel(self.forcastWidget)
+                self.forecastWidget = QtWidgets.QWidget(self.centralwidget)
+                self.forecastWidget.setGeometry(QtCore.QRect(460, 20, 421, 511))
+                self.forecastWidget.setObjectName("forecastWidget")
+                self.forecastWidget.hide()
+                self.day3_border = QtWidgets.QLabel(self.forecastWidget)
                 self.day3_border.setGeometry(QtCore.QRect(10, 200, 401, 91))
                 self.day3_border.setStyleSheet("\n"
         "border: 3px solid white;\n"
         "border-radius: 15px;")
                 self.day3_border.setText("")
                 self.day3_border.setObjectName("day3_border")
-                self.highTempLabel_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.highTempLabel_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.highTempLabel_1.setGeometry(QtCore.QRect(20, 30, 51, 31))
                 sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
                 sizePolicy.setHorizontalStretch(0)
@@ -546,19 +546,19 @@ class Ui_MainWindow(object):
                 self.highTempLabel_1.setFont(font)
                 self.highTempLabel_1.setAutoFillBackground(False)
                 self.highTempLabel_1.setObjectName("highTempLabel_1")
-                self.UVImageLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVImageLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVImageLabel_2.setGeometry(QtCore.QRect(270, 140, 41, 41))
                 self.UVImageLabel_2.setText("")
                 self.UVImageLabel_2.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_2.setScaledContents(True)
                 self.UVImageLabel_2.setObjectName("UVImageLabel_2")
-                self.percipImageLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipImageLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipImageLabel_2.setGeometry(QtCore.QRect(270, 110, 41, 31))
                 self.percipImageLabel_2.setText("")
                 self.percipImageLabel_2.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_2.setScaledContents(True)
                 self.percipImageLabel_2.setObjectName("percipImageLabel_2")
-                self.UVLabel = QtWidgets.QLabel(self.forcastWidget)
+                self.UVLabel = QtWidgets.QLabel(self.forecastWidget)
                 self.UVLabel.setGeometry(QtCore.QRect(310, 50, 51, 21))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -577,7 +577,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.UVLabel.setFont(font)
                 self.UVLabel.setObjectName("UVLabel")
-                self.percipLevelLabel_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipLevelLabel_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipLevelLabel_1.setGeometry(QtCore.QRect(310, 10, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -596,7 +596,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.percipLevelLabel_1.setFont(font)
                 self.percipLevelLabel_1.setObjectName("percipLevelLabel_1")
-                self.UVLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVLabel_2.setGeometry(QtCore.QRect(310, 150, 51, 21))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -615,7 +615,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.UVLabel_2.setFont(font)
                 self.UVLabel_2.setObjectName("UVLabel_2")
-                self.percipLevelLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipLevelLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipLevelLabel_4.setGeometry(QtCore.QRect(310, 310, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -634,7 +634,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.percipLevelLabel_4.setFont(font)
                 self.percipLevelLabel_4.setObjectName("percipLevelLabel_4")
-                self.day1_image_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_image_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_image_4.setEnabled(True)
                 self.day1_image_4.setGeometry(QtCore.QRect(90, 310, 71, 71))
                 self.day1_image_4.setText("")
@@ -642,7 +642,7 @@ class Ui_MainWindow(object):
                 self.day1_image_4.setScaledContents(True)
                 self.day1_image_4.setAlignment(QtCore.Qt.AlignCenter)
                 self.day1_image_4.setObjectName("day1_image_4")
-                self.day3_date = QtWidgets.QLabel(self.forcastWidget)
+                self.day3_date = QtWidgets.QLabel(self.forecastWidget)
                 self.day3_date.setGeometry(QtCore.QRect(190, 200, 51, 31))
                 font = QtGui.QFont()
                 font.setPointSize(10)
@@ -651,7 +651,7 @@ class Ui_MainWindow(object):
                 font.setWeight(75)
                 self.day3_date.setFont(font)
                 self.day3_date.setObjectName("day3_date")
-                self.day5_date = QtWidgets.QLabel(self.forcastWidget)
+                self.day5_date = QtWidgets.QLabel(self.forecastWidget)
                 self.day5_date.setGeometry(QtCore.QRect(190, 400, 51, 31))
                 font = QtGui.QFont()
                 font.setPointSize(10)
@@ -660,7 +660,7 @@ class Ui_MainWindow(object):
                 font.setWeight(75)
                 self.day5_date.setFont(font)
                 self.day5_date.setObjectName("day5_date")
-                self.day1_image_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_image_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_image_3.setEnabled(True)
                 self.day1_image_3.setGeometry(QtCore.QRect(90, 210, 71, 71))
                 self.day1_image_3.setText("")
@@ -668,14 +668,14 @@ class Ui_MainWindow(object):
                 self.day1_image_3.setScaledContents(True)
                 self.day1_image_3.setAlignment(QtCore.Qt.AlignCenter)
                 self.day1_image_3.setObjectName("day1_image_3")
-                self.day2_border = QtWidgets.QLabel(self.forcastWidget)
+                self.day2_border = QtWidgets.QLabel(self.forecastWidget)
                 self.day2_border.setGeometry(QtCore.QRect(10, 100, 401, 91))
                 self.day2_border.setStyleSheet("\n"
         "border: 3px solid white;\n"
         "border-radius: 15px;")
                 self.day2_border.setText("")
                 self.day2_border.setObjectName("day2_border")
-                self.percipLevelLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipLevelLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipLevelLabel_5.setGeometry(QtCore.QRect(310, 410, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -694,19 +694,19 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.percipLevelLabel_5.setFont(font)
                 self.percipLevelLabel_5.setObjectName("percipLevelLabel_5")
-                self.percipImageLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipImageLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipImageLabel_4.setGeometry(QtCore.QRect(270, 310, 41, 31))
                 self.percipImageLabel_4.setText("")
                 self.percipImageLabel_4.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_4.setScaledContents(True)
                 self.percipImageLabel_4.setObjectName("percipImageLabel_4")
-                self.UVImageLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVImageLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVImageLabel_5.setGeometry(QtCore.QRect(270, 440, 41, 41))
                 self.UVImageLabel_5.setText("")
                 self.UVImageLabel_5.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_5.setScaledContents(True)
                 self.UVImageLabel_5.setObjectName("UVImageLabel_5")
-                self.weatherMain_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_4.setGeometry(QtCore.QRect(160, 330, 111, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -726,7 +726,7 @@ class Ui_MainWindow(object):
                 self.weatherMain_4.setFont(font)
                 self.weatherMain_4.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_4.setObjectName("weatherMain_4")
-                self.day2_date = QtWidgets.QLabel(self.forcastWidget)
+                self.day2_date = QtWidgets.QLabel(self.forecastWidget)
                 self.day2_date.setGeometry(QtCore.QRect(190, 100, 51, 31))
                 font = QtGui.QFont()
                 font.setPointSize(10)
@@ -735,7 +735,7 @@ class Ui_MainWindow(object):
                 font.setWeight(75)
                 self.day2_date.setFont(font)
                 self.day2_date.setObjectName("day2_date")
-                self.weatherMain_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_1.setGeometry(QtCore.QRect(160, 30, 111, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -755,7 +755,7 @@ class Ui_MainWindow(object):
                 self.weatherMain_1.setFont(font)
                 self.weatherMain_1.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_1.setObjectName("weatherMain_1")
-                self.percipLevelLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipLevelLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipLevelLabel_2.setGeometry(QtCore.QRect(310, 110, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -774,21 +774,21 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.percipLevelLabel_2.setFont(font)
                 self.percipLevelLabel_2.setObjectName("percipLevelLabel_2")
-                self.day1_border = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_border = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_border.setGeometry(QtCore.QRect(10, 0, 401, 91))
                 self.day1_border.setStyleSheet("\n"
         "border: 3px solid white;\n"
         "border-radius: 15px;")
                 self.day1_border.setText("")
                 self.day1_border.setObjectName("day1_border")
-                self.day5_border = QtWidgets.QLabel(self.forcastWidget)
+                self.day5_border = QtWidgets.QLabel(self.forecastWidget)
                 self.day5_border.setGeometry(QtCore.QRect(10, 400, 401, 91))
                 self.day5_border.setStyleSheet("\n"
         "border: 3px solid white;\n"
         "border-radius: 15px;")
                 self.day5_border.setText("")
                 self.day5_border.setObjectName("day5_border")
-                self.UVLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVLabel_5.setGeometry(QtCore.QRect(310, 450, 51, 21))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -807,13 +807,13 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.UVLabel_5.setFont(font)
                 self.UVLabel_5.setObjectName("UVLabel_5")
-                self.percipImageLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipImageLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipImageLabel_5.setGeometry(QtCore.QRect(270, 410, 41, 31))
                 self.percipImageLabel_5.setText("")
                 self.percipImageLabel_5.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_5.setScaledContents(True)
                 self.percipImageLabel_5.setObjectName("percipImageLabel_5")
-                self.weatherMain_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_2.setGeometry(QtCore.QRect(160, 130, 111, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -833,7 +833,7 @@ class Ui_MainWindow(object):
                 self.weatherMain_2.setFont(font)
                 self.weatherMain_2.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_2.setObjectName("weatherMain_2")
-                self.weatherMain_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_5.setGeometry(QtCore.QRect(160, 430, 111, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -853,7 +853,7 @@ class Ui_MainWindow(object):
                 self.weatherMain_5.setFont(font)
                 self.weatherMain_5.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_5.setObjectName("weatherMain_5")
-                self.day1_image_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_image_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_image_2.setEnabled(True)
                 self.day1_image_2.setGeometry(QtCore.QRect(90, 110, 71, 71))
                 self.day1_image_2.setText("")
@@ -861,7 +861,7 @@ class Ui_MainWindow(object):
                 self.day1_image_2.setScaledContents(True)
                 self.day1_image_2.setAlignment(QtCore.Qt.AlignCenter)
                 self.day1_image_2.setObjectName("day1_image_2")
-                self.highTempLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.highTempLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.highTempLabel_5.setGeometry(QtCore.QRect(20, 430, 51, 31))
                 sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
                 sizePolicy.setHorizontalStretch(0)
@@ -872,7 +872,7 @@ class Ui_MainWindow(object):
                 font.setPointSize(17)
                 self.highTempLabel_5.setFont(font)
                 self.highTempLabel_5.setObjectName("highTempLabel_5")
-                self.highTempLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.highTempLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.highTempLabel_3.setGeometry(QtCore.QRect(20, 230, 51, 31))
                 sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
                 sizePolicy.setHorizontalStretch(0)
@@ -883,7 +883,7 @@ class Ui_MainWindow(object):
                 font.setPointSize(17)
                 self.highTempLabel_3.setFont(font)
                 self.highTempLabel_3.setObjectName("highTempLabel_3")
-                self.lowTempLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.lowTempLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.lowTempLabel_2.setGeometry(QtCore.QRect(60, 130, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -902,7 +902,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.lowTempLabel_2.setFont(font)
                 self.lowTempLabel_2.setObjectName("lowTempLabel_2")
-                self.UVLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVLabel_3.setGeometry(QtCore.QRect(310, 250, 51, 21))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -921,13 +921,13 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.UVLabel_3.setFont(font)
                 self.UVLabel_3.setObjectName("UVLabel_3")
-                self.UVImageLabel_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVImageLabel_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVImageLabel_1.setGeometry(QtCore.QRect(270, 40, 41, 41))
                 self.UVImageLabel_1.setText("")
                 self.UVImageLabel_1.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_1.setScaledContents(True)
                 self.UVImageLabel_1.setObjectName("UVImageLabel_1")
-                self.weatherMain_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_3.setGeometry(QtCore.QRect(160, 230, 111, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -947,13 +947,13 @@ class Ui_MainWindow(object):
                 self.weatherMain_3.setFont(font)
                 self.weatherMain_3.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_3.setObjectName("weatherMain_3")
-                self.UVImageLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVImageLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVImageLabel_3.setGeometry(QtCore.QRect(270, 240, 41, 41))
                 self.UVImageLabel_3.setText("")
                 self.UVImageLabel_3.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_3.setScaledContents(True)
                 self.UVImageLabel_3.setObjectName("UVImageLabel_3")
-                self.percipLevelLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipLevelLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipLevelLabel_3.setGeometry(QtCore.QRect(310, 210, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -972,14 +972,14 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.percipLevelLabel_3.setFont(font)
                 self.percipLevelLabel_3.setObjectName("percipLevelLabel_3")
-                self.day4_border = QtWidgets.QLabel(self.forcastWidget)
+                self.day4_border = QtWidgets.QLabel(self.forecastWidget)
                 self.day4_border.setGeometry(QtCore.QRect(10, 300, 401, 91))
                 self.day4_border.setStyleSheet("\n"
         "border: 3px solid white;\n"
         "border-radius: 15px;")
                 self.day4_border.setText("")
                 self.day4_border.setObjectName("day4_border")
-                self.highTempLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.highTempLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.highTempLabel_4.setGeometry(QtCore.QRect(20, 330, 51, 31))
                 sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
                 sizePolicy.setHorizontalStretch(0)
@@ -990,7 +990,7 @@ class Ui_MainWindow(object):
                 font.setPointSize(17)
                 self.highTempLabel_4.setFont(font)
                 self.highTempLabel_4.setObjectName("highTempLabel_4")
-                self.UVLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVLabel_4.setGeometry(QtCore.QRect(310, 350, 51, 21))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -1009,7 +1009,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.UVLabel_4.setFont(font)
                 self.UVLabel_4.setObjectName("UVLabel_4")
-                self.day1_image_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_image_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_image_1.setEnabled(True)
                 self.day1_image_1.setGeometry(QtCore.QRect(90, 10, 71, 71))
                 self.day1_image_1.setText("")
@@ -1017,7 +1017,7 @@ class Ui_MainWindow(object):
                 self.day1_image_1.setScaledContents(True)
                 self.day1_image_1.setAlignment(QtCore.Qt.AlignCenter)
                 self.day1_image_1.setObjectName("day1_image_1")
-                self.day1_image_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_image_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_image_5.setEnabled(True)
                 self.day1_image_5.setGeometry(QtCore.QRect(90, 410, 71, 71))
                 self.day1_image_5.setText("")
@@ -1025,7 +1025,7 @@ class Ui_MainWindow(object):
                 self.day1_image_5.setScaledContents(True)
                 self.day1_image_5.setAlignment(QtCore.Qt.AlignCenter)
                 self.day1_image_5.setObjectName("day1_image_5")
-                self.lowTempLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.lowTempLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.lowTempLabel_4.setGeometry(QtCore.QRect(60, 330, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -1044,7 +1044,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.lowTempLabel_4.setFont(font)
                 self.lowTempLabel_4.setObjectName("lowTempLabel_4")
-                self.lowTempLabel_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.lowTempLabel_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.lowTempLabel_5.setGeometry(QtCore.QRect(60, 430, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -1063,19 +1063,19 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.lowTempLabel_5.setFont(font)
                 self.lowTempLabel_5.setObjectName("lowTempLabel_5")
-                self.percipImageLabel_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipImageLabel_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipImageLabel_1.setGeometry(QtCore.QRect(270, 10, 41, 31))
                 self.percipImageLabel_1.setText("")
                 self.percipImageLabel_1.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_1.setScaledContents(True)
                 self.percipImageLabel_1.setObjectName("percipImageLabel_1")
-                self.percipImageLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.percipImageLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.percipImageLabel_3.setGeometry(QtCore.QRect(270, 210, 41, 31))
                 self.percipImageLabel_3.setText("")
                 self.percipImageLabel_3.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_3.setScaledContents(True)
                 self.percipImageLabel_3.setObjectName("percipImageLabel_3")
-                self.day4_date = QtWidgets.QLabel(self.forcastWidget)
+                self.day4_date = QtWidgets.QLabel(self.forecastWidget)
                 self.day4_date.setGeometry(QtCore.QRect(190, 300, 51, 31))
                 font = QtGui.QFont()
                 font.setPointSize(10)
@@ -1084,7 +1084,7 @@ class Ui_MainWindow(object):
                 font.setWeight(75)
                 self.day4_date.setFont(font)
                 self.day4_date.setObjectName("day4_date")
-                self.lowTempLabel_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.lowTempLabel_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.lowTempLabel_3.setGeometry(QtCore.QRect(60, 230, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -1103,7 +1103,7 @@ class Ui_MainWindow(object):
                 font.setWeight(50)
                 self.lowTempLabel_3.setFont(font)
                 self.lowTempLabel_3.setObjectName("lowTempLabel_3")
-                self.day1_date = QtWidgets.QLabel(self.forcastWidget)
+                self.day1_date = QtWidgets.QLabel(self.forecastWidget)
                 self.day1_date.setGeometry(QtCore.QRect(190, 0, 51, 31))
                 font = QtGui.QFont()
                 font.setPointSize(10)
@@ -1112,13 +1112,13 @@ class Ui_MainWindow(object):
                 font.setWeight(75)
                 self.day1_date.setFont(font)
                 self.day1_date.setObjectName("day1_date")
-                self.UVImageLabel_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.UVImageLabel_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.UVImageLabel_4.setGeometry(QtCore.QRect(270, 340, 41, 41))
                 self.UVImageLabel_4.setText("")
                 self.UVImageLabel_4.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_4.setScaledContents(True)
                 self.UVImageLabel_4.setObjectName("UVImageLabel_4")
-                self.highTempLabel_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.highTempLabel_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.highTempLabel_2.setGeometry(QtCore.QRect(20, 130, 51, 31))
                 sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
                 sizePolicy.setHorizontalStretch(0)
@@ -1129,7 +1129,7 @@ class Ui_MainWindow(object):
                 font.setPointSize(17)
                 self.highTempLabel_2.setFont(font)
                 self.highTempLabel_2.setObjectName("highTempLabel_2")
-                self.lowTempLabel_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.lowTempLabel_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.lowTempLabel_1.setGeometry(QtCore.QRect(60, 30, 51, 31))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
@@ -1177,12 +1177,12 @@ class Ui_MainWindow(object):
                 self.stateComboBox.raise_()
                 self.searchButton.raise_()
                 self.infoLabel.raise_()
-                self.forcastWidget.raise_()
+                self.forecastWidget.raise_()
                 MainWindow.setCentralWidget(self.centralwidget)
 
                 self.retranslateUi(MainWindow)
                 #self.searchButton.clicked.connect(self.cityTextBrowser.copy)
-                #self.searchButton.clicked.connect(self.forcastWidget.show)
+                #self.searchButton.clicked.connect(self.forecastWidget.show)
                 QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         
@@ -1191,9 +1191,9 @@ class Ui_MainWindow(object):
         def retranslateUi(self, MainWindow):
                 
                 _translate = QtCore.QCoreApplication.translate
-                MainWindow.setWindowTitle(_translate("MainWindow", "Forcasting App - Will G"))
-                self.TitleLabel.setText(_translate("MainWindow", "5 DAY\nFORCAST"))
-                self.instructionsLabel.setText(_translate("MainWindow", "Enter your city and state below to get your\nweather forcast!"))
+                MainWindow.setWindowTitle(_translate("MainWindow", "Forecasting App - Will G"))
+                self.TitleLabel.setText(_translate("MainWindow", "5 DAY\nForecast"))
+                self.instructionsLabel.setText(_translate("MainWindow", "Enter your city and state below to get your\nweather forecast!"))
                 self.stateComboBox.setItemText(0, _translate("MainWindow", "State"))
                 self.stateComboBox.setItemText(1, _translate("MainWindow", "AL"))
                 self.stateComboBox.setItemText(2, _translate("MainWindow", "AK"))
@@ -1287,7 +1287,7 @@ class Ui_MainWindow(object):
 
         def get_lat_lon(self):
                 
-                self.forcastWidget.hide()
+                self.forecastWidget.hide()
                 
                 self.city = str(self.cityTE.toPlainText()) #get city from text box
                 self.state = str(self.stateComboBox.currentText()) #
@@ -1302,7 +1302,7 @@ class Ui_MainWindow(object):
                                 QtWidgets.QApplication.processEvents()
                                 return #allow the user to enter info again
 
-                        self.infoLabel.setText("Getting weather forcast...") #show user it is getting the forcast
+                        self.infoLabel.setText("Getting weather forecast...") #show user it is getting the forecast
                         QtWidgets.QApplication.processEvents()
                         print(self.location_info) #test print
 
@@ -1315,23 +1315,23 @@ class Ui_MainWindow(object):
         
                         print(self.lat, self.lon)
 
-                        self.get_forcast(self.lat, self.lon) #send lat and lon to get weather 
+                        self.get_forecast(self.lat, self.lon) #send lat and lon to get weather 
 
-        def get_forcast(self, lat, lon):
+        def get_forecast(self, lat, lon):
                 #print(lat, lon)
                 self.weather_r = requests.get(f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=current,hourly,minutely&appid={API_KEY}&units=imperial')
 
                 self.weather_info = json.loads(self.weather_r.text) #jsonify the api info
                 
-                self.forcast_raw = [] #empty list to store daily forcast
+                self.forecast_raw = [] #empty list to store daily forecast
                 
                 for day_number in range(6): # Add all 5 days to a list to be sent out for formatting
                         #print(f'adding day {day_number}')
-                        if(day_number == 0): #skip the fist day of forcast (today)
+                        if(day_number == 0): #skip the fist day of forecast (today)
                                 continue
-                        self.forcast_raw.append(self.weather_info['daily'][day_number])
+                        self.forecast_raw.append(self.weather_info['daily'][day_number])
                         
-                self.seperate_days(self.forcast_raw) #run spereate days function
+                self.seperate_days(self.forecast_raw) #run spereate days function
                 
         def seperate_days(self, dayList):
                 
@@ -1353,7 +1353,7 @@ class Ui_MainWindow(object):
                         unix_dt = day_info['dt'] #dateTime in unix, to be converted
                         high_temp = round(float(day_info['temp']['max'])) #highest temp
                         low_temp = round(float(day_info['temp']['min'])) #lowest temp
-                        main_weather = day_info['weather'][0]['description'] #main weather forcast description
+                        main_weather = day_info['weather'][0]['description'] #main weather forecast description
                         image = (f"https://openweathermap.org/img/wn/{day_info['weather'][0]['icon']}@2x.png")
                         precip = round(float(day_info['pop'])*100) #probability of precipitation 0 - 100
                         uvi = round(float(day_info['uvi'])) #UV index out of 10
@@ -1424,13 +1424,13 @@ class Ui_MainWindow(object):
                 self.UVLabel_4.setText(f"{uvis[3]}/10")
                 self.UVLabel_5.setText(f"{uvis[4]}/10")
                 
-                self.forcastWidget.show()
+                self.forecastWidget.show()
                 
-                self.infoLabel.setText(f"Here is your forcast!\n{self.city}, {self.state}\n\n{self.lat}, {self.lon}")
+                self.infoLabel.setText(f"Here is your forecast!\n{self.city}, {self.state}\n\n{self.lat}, {self.lon}")
                 
                 QtWidgets.QApplication.processEvents()
         
-                #print(len(self.forcast_raw))
+                #print(len(self.forecast_raw))
                 
                 
 
