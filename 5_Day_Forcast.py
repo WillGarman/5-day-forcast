@@ -8,9 +8,9 @@ from datetime import datetime
 API_KEY = '05a59ce96cb307a4e12ed503a455c1a0' #API Key for forcast calls
 
 #----------------------(Start) Downloaded Images----------------------------
-sunImage = f'{os.getcwd()}\\images\\sun_469-removebg-preview.png'
-percipImage = f'{os.getcwd()}\\images\\5-57317_water-drop-clipart-png-transparent-png-removebg-preview.png'
-backgroundImage = f'{os.getcwd()}\\images\\untitled.png'
+sunImage = f'{os.getcwd()}\\images\\sun.png'
+percipImage = f'{os.getcwd()}\\images\\water.png'
+backgroundImage = f'{os.getcwd()}\\images\\clouds.png'
 #----------------------(End) Downloaded Images------------------------------
 
 class Ui_MainWindow(object): #houses all of the functions/UI for the application
@@ -699,7 +699,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.UVImageLabel_5.setScaledContents(True)
                 self.UVImageLabel_5.setObjectName("UVImageLabel_5")
                 self.weatherMain_4 = QtWidgets.QLabel(self.forcastWidget)
-                self.weatherMain_4.setGeometry(QtCore.QRect(160, 330, 111, 31))
+                self.weatherMain_4.setGeometry(QtCore.QRect(160, 330, 111, 51))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -728,7 +728,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.day2_date.setFont(font)
                 self.day2_date.setObjectName("day2_date")
                 self.weatherMain_1 = QtWidgets.QLabel(self.forcastWidget)
-                self.weatherMain_1.setGeometry(QtCore.QRect(160, 30, 111, 31))
+                self.weatherMain_1.setGeometry(QtCore.QRect(160, 30, 121, 51))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -806,7 +806,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.percipImageLabel_5.setScaledContents(True)
                 self.percipImageLabel_5.setObjectName("percipImageLabel_5")
                 self.weatherMain_2 = QtWidgets.QLabel(self.forcastWidget)
-                self.weatherMain_2.setGeometry(QtCore.QRect(160, 130, 111, 31))
+                self.weatherMain_2.setGeometry(QtCore.QRect(160, 130, 121, 51))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -826,7 +826,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.weatherMain_2.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_2.setObjectName("weatherMain_2")
                 self.weatherMain_5 = QtWidgets.QLabel(self.forcastWidget)
-                self.weatherMain_5.setGeometry(QtCore.QRect(160, 430, 111, 31))
+                self.weatherMain_5.setGeometry(QtCore.QRect(150, 430, 121, 51))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -920,7 +920,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.UVImageLabel_1.setScaledContents(True)
                 self.UVImageLabel_1.setObjectName("UVImageLabel_1")
                 self.weatherMain_3 = QtWidgets.QLabel(self.forcastWidget)
-                self.weatherMain_3.setGeometry(QtCore.QRect(160, 230, 111, 31))
+                self.weatherMain_3.setGeometry(QtCore.QRect(150, 230, 121, 51))
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -1299,7 +1299,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 
                 self.forcastWidget.hide()
                 
-                self.city = str(self.cityTE.toPlainText()) #get city from text box
+                self.city = str(self.cityTE.toPlainText()).strip() #get city from text box
                 self.state = str(self.stateComboBox.currentText()) #get state from combo box
                 print(self.city, self.state) #test print
                 self.location_r = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={self.city},{self.state},US&limit=1&appid={API_KEY}') #request to get location info (city,state,latittude,longitude)
@@ -1365,6 +1365,14 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                         precip = round(float(day_info['pop'])*100) #probability of precipitation 0 - 100
                         uvi = round(float(day_info['uvi'])) #UV index out of 10
                         
+                        if(len(main_weather) > 14):
+                                main_weather_split = main_weather.split(' ')
+                                if (len(main_weather_split) == 2):
+                                        main_weather = f"{main_weather_split[0]}\n{main_weather_split[1]}"
+                                elif (len(main_weather_split) == 3):
+                                        main_weather = f"{main_weather_split[0]}\n{main_weather_split[1]}\n{main_weather_split[2]}"
+                                else:
+                                        main_weather = f"{main_weather_split[0]} {main_weather_split[1]}\n{main_weather_split[2]} {main_weather_split[3]}"
                         #print(image)
                         
                         
