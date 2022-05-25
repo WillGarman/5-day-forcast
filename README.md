@@ -5,7 +5,7 @@ This application will allow you to put in any (city, state) and get the weather 
 - All tempratures are shown in Fahrenheit
 - In the bottom right corner (after getting a forcast) shows you:
   - Full name of your City, State 
-  - Longitude and Latitude of location
+  - Latitude and Longitude of location
 
 
 ### Required
