@@ -1301,7 +1301,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 
                 self.city = str(self.cityTE.toPlainText()).strip() #get city from text box
                 self.state = str(self.stateComboBox.currentText()) #get state from combo box
-                print(self.city, self.state) #test print
+                #print(self.city, self.state) #test print
                 self.location_r = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={self.city},{self.state},US&limit=1&appid={API_KEY}') #request to get location info (city,state,latittude,longitude)
                 if(self.location_r.ok): #if the request is a [200]
 
@@ -1314,14 +1314,14 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
 
                         self.infoLabel.setText("Getting weather forecast...") #show user it is getting the forecast
                         QtWidgets.QApplication.processEvents() #update UI
-                        print(self.location_info) #test print
+                        #print(self.location_info) #test print
 
                         self.lat = (self.location_info[0]['lat']) #get lattitiude
                         self.lon = (self.location_info[0]['lon']) #get longitutude
                         self.city = (self.location_info[0]['name']) #official city
                         self.state = (self.location_info[0]['state']) #coutry
         
-                        print(self.lat, self.lon)
+                        #print(self.lat, self.lon)
 
                         self.get_forcast() #send lat and lon to get forecast 
 
@@ -1350,7 +1350,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.percips = []
                 self.uvis = []
                 
-                print(dayList)
+                #print(dayList)
                 
                 for day in dayList:
                         day_info = day
@@ -1360,7 +1360,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                         unix_dt = day_info['dt'] #dateTime in unix, to be converted
                         high_temp = round(float(day_info['temp']['max'])) #highest temp
                         low_temp = round(float(day_info['temp']['min'])) #lowest temp
-                        main_weather = day_info['weather'][0]['description'] #main weather forecast description
+                        main_weather = (day_info['weather'][0]['description']).title() #main weather forecast description
                         image = (f"https://openweathermap.org/img/wn/{day_info['weather'][0]['icon']}@2x.png")
                         precip = round(float(day_info['pop'])*100) #probability of precipitation 0 - 100
                         uvi = round(float(day_info['uvi'])) #UV index out of 10
@@ -1368,11 +1368,11 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                         if(len(main_weather) > 14):
                                 main_weather_split = main_weather.split(' ')
                                 if (len(main_weather_split) == 2):
-                                        main_weather = f"{main_weather_split[0]}\n{main_weather_split[1]}"
+                                        main_weather = (f"{main_weather_split[0]}\n{main_weather_split[1]}").title()
                                 elif (len(main_weather_split) == 3):
-                                        main_weather = f"{main_weather_split[0]}\n{main_weather_split[1]}\n{main_weather_split[2]}"
+                                        main_weather = (f"{main_weather_split[0]}\n{main_weather_split[1]}\n{main_weather_split[2]}").title()
                                 else:
-                                        main_weather = f"{main_weather_split[0]} {main_weather_split[1]}\n{main_weather_split[2]} {main_weather_split[3]}"
+                                        main_weather = (f"{main_weather_split[0]} {main_weather_split[1]}\n{main_weather_split[2]} {main_weather_split[3]}").title()
                         #print(image)
                         
                         
