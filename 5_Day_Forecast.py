@@ -1287,7 +1287,6 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.lowTempLabel_1.setText(_translate("MainWindow", "/66°"))
                 self.cityTE.setPlaceholderText(_translate("MainWindow", "City"))
                 self.reset_button.setText(_translate("MainWindow", "Reset"))
-                #self.searchButton.clicked.connect(self.cityTextBrowser.copy)
                 
                 
                 self.searchButton.clicked.connect(self.get_lat_lon) #when search button is clicked, run get_lat_lon (line 1312)
@@ -1301,7 +1300,6 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 
                 self.city = str(self.cityTE.toPlainText()).strip() #get city from text box
                 self.state = str(self.stateComboBox.currentText()) #get state from combo box
-                #print(self.city, self.state) #test print
                 self.location_r = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={self.city},{self.state},US&limit=1&appid={API_KEY}') #request to get location info (city,state,latittude,longitude)
                 if(self.location_r.ok): #if the request is a [200]
 
@@ -1314,19 +1312,15 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
 
                         self.infoLabel.setText("Getting weather forecast...") #show user it is getting the forecast
                         QtWidgets.QApplication.processEvents() #update UI
-                        #print(self.location_info) #test print
-
+                        
                         self.lat = (self.location_info[0]['lat']) #get lattitiude
                         self.lon = (self.location_info[0]['lon']) #get longitutude
                         self.city = (self.location_info[0]['name']) #official city
                         self.state = (self.location_info[0]['state']) #coutry
-        
-                        #print(self.lat, self.lon)
 
                         self.get_forcast() #send lat and lon to get forecast 
 
         def get_forcast(self): #send request to weather API to get forecast
-                #print(lat, lon)
                 self.weather_r = requests.get(f'https://api.openweathermap.org/data/2.5/onecall?lat={self.lat}&lon={self.lon}&exclude=current,hourly,minutely&appid={API_KEY}&units=imperial')
 
                 self.weather_info = json.loads(self.weather_r.text) #jsonify the api info
@@ -1352,10 +1346,8 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 
                 #print(dayList)
                 
-                for day in dayList:
+                for day in dayList: #go through each day in the list
                         day_info = day
-                        
-                        #day_info = json.loads(str(day))
                         
                         unix_dt = day_info['dt'] #dateTime in unix, to be converted
                         high_temp = round(float(day_info['temp']['max'])) #highest temp
@@ -1373,9 +1365,6 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                                         main_weather = (f"{main_weather_split[0]}\n{main_weather_split[1]}\n{main_weather_split[2]}").title()
                                 else:
                                         main_weather = (f"{main_weather_split[0]} {main_weather_split[1]}\n{main_weather_split[2]} {main_weather_split[3]}").title()
-                        #print(image)
-                        
-                        
                         
                         formatted_time = datetime.fromtimestamp(unix_dt).strftime('%a %d') #formats time like 'Mon 18'
                         
