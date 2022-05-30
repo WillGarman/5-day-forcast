@@ -2,14 +2,20 @@
 
 This application will allow you to put in any (city, state) and get the weather forecast over the next 5 days
 
+- All temperature are shown in **Fahrenheit**
+  - The big bold number is the **high temperature** for the day
+  - The little non-bold number beside it shows the **low temperature** for the day
+  - The percentage beside the water drop represents your **chance of precipitation** for the day
+  - the fraction beside the sun represents the **UV index** (out of 10) for the day 
+- In the bottom right corner (after getting a forcast) shows you:
+  - Full name of your City, State 
+  - Latitude and Longitude of location
 
 
 ### Required
-In order to run the application you will need to have installed:
+In order to run the application you will **need** to have installed:
 - 5_Day_Forecast.py
   - Packages needed: pip install -r requirements.txt
 - Images Folder 
 
-#### Old Files
 
-You can view past files in the ["old_files" branch](https://github.com/WillGarman/Awesome-Inc-FIO/tree/old_files)
