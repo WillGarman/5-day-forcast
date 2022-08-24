@@ -5,17 +5,24 @@ import json
 import sys
 from datetime import datetime
 
-<<<<<<< HEAD:5_Day_Forcast.py
+
 #from main import get_forecast
-=======
+
 API_KEY = '05a59ce96cb307a4e12ed503a455c1a0' #API Key for forcast calls
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
+
 
 #----------------------(Start) Downloaded Images----------------------------
 sunImage = f'{os.getcwd()}\\images\\sun.png'
 percipImage = f'{os.getcwd()}\\images\\water.png'
 backgroundImage = f'{os.getcwd()}\\images\\clouds.png'
 #----------------------(End) Downloaded Images------------------------------
+
+stateList = [ 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA',
+           'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME',
+           'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM',
+           'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX',
+           'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+
 
 class Ui_MainWindow(object): #houses all of the functions/UI for the application
         
@@ -409,56 +416,8 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.stateComboBox.setFont(font)
                 self.stateComboBox.setStyleSheet("")
                 self.stateComboBox.setObjectName("stateComboBox")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
-                self.stateComboBox.addItem("")
+                for _ in range(len(stateList)): #for all 50 states (length of stateList)
+                        self.stateComboBox.addItem("")
                 self.searchButton = QtWidgets.QPushButton(self.centralwidget)
                 self.searchButton.setGeometry(QtCore.QRect(20, 310, 181, 61))
                 palette = QtGui.QPalette()
@@ -702,13 +661,10 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.UVImageLabel_5.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_5.setScaledContents(True)
                 self.UVImageLabel_5.setObjectName("UVImageLabel_5")
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.weatherMain_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_4.setGeometry(QtCore.QRect(160, 330, 111, 31))
-=======
-                self.weatherMain_4 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_4 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_4.setGeometry(QtCore.QRect(160, 330, 111, 51))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -736,13 +692,10 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 font.setWeight(75)
                 self.day2_date.setFont(font)
                 self.day2_date.setObjectName("day2_date")
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.weatherMain_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_1.setGeometry(QtCore.QRect(160, 30, 111, 31))
-=======
-                self.weatherMain_1 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_1 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_1.setGeometry(QtCore.QRect(160, 30, 121, 51))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -819,13 +772,10 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.percipImageLabel_5.setPixmap(QtGui.QPixmap(percipImage))
                 self.percipImageLabel_5.setScaledContents(True)
                 self.percipImageLabel_5.setObjectName("percipImageLabel_5")
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.weatherMain_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_2.setGeometry(QtCore.QRect(160, 130, 111, 31))
-=======
-                self.weatherMain_2 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_2 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_2.setGeometry(QtCore.QRect(160, 130, 121, 51))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -844,13 +794,10 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.weatherMain_2.setFont(font)
                 self.weatherMain_2.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
                 self.weatherMain_2.setObjectName("weatherMain_2")
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.weatherMain_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_5.setGeometry(QtCore.QRect(160, 430, 111, 31))
-=======
-                self.weatherMain_5 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_5 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_5.setGeometry(QtCore.QRect(150, 430, 121, 51))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -943,13 +890,10 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.UVImageLabel_1.setPixmap(QtGui.QPixmap(sunImage))
                 self.UVImageLabel_1.setScaledContents(True)
                 self.UVImageLabel_1.setObjectName("UVImageLabel_1")
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.weatherMain_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_3.setGeometry(QtCore.QRect(160, 230, 111, 31))
-=======
-                self.weatherMain_3 = QtWidgets.QLabel(self.forcastWidget)
+                self.weatherMain_3 = QtWidgets.QLabel(self.forecastWidget)
                 self.weatherMain_3.setGeometry(QtCore.QRect(150, 230, 121, 51))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 palette = QtGui.QPalette()
                 brush = QtGui.QBrush(QtGui.QColor(94, 94, 94))
                 brush.setStyle(QtCore.Qt.SolidPattern)
@@ -1222,11 +1166,7 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 MainWindow.setCentralWidget(self.centralwidget)
 
                 self.retranslateUi(MainWindow)
-<<<<<<< HEAD:5_Day_Forcast.py
-                #self.searchButton.clicked.connect(self.cityTextBrowser.copy)
-                #self.searchButton.clicked.connect(self.forecastWidget.show)
-=======
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
+
                 QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         
@@ -1234,99 +1174,16 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 
                 _translate = QtCore.QCoreApplication.translate
                 MainWindow.setWindowTitle(_translate("MainWindow", "Forecasting App - Will G"))
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.TitleLabel.setText(_translate("MainWindow", "5 DAY\nForecast"))
-=======
-                self.TitleLabel.setText(_translate("MainWindow", "5 DAY\nFORECAST"))
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 self.instructionsLabel.setText(_translate("MainWindow", "Enter your city and state below to get your\nweather forecast!"))
                 self.stateComboBox.setItemText(0, _translate("MainWindow", "State"))
-                self.stateComboBox.setItemText(1, _translate("MainWindow", "AL"))
-                self.stateComboBox.setItemText(2, _translate("MainWindow", "AK"))
-                self.stateComboBox.setItemText(3, _translate("MainWindow", "AZ"))
-                self.stateComboBox.setItemText(4, _translate("MainWindow", "AR"))
-                self.stateComboBox.setItemText(5, _translate("MainWindow", "CA"))
-                self.stateComboBox.setItemText(6, _translate("MainWindow", "CO"))
-                self.stateComboBox.setItemText(7, _translate("MainWindow", "CT"))
-                self.stateComboBox.setItemText(8, _translate("MainWindow", "DE"))
-                self.stateComboBox.setItemText(9, _translate("MainWindow", "FL"))
-                self.stateComboBox.setItemText(10, _translate("MainWindow", "GA"))
-                self.stateComboBox.setItemText(11, _translate("MainWindow", "HI"))
-                self.stateComboBox.setItemText(12, _translate("MainWindow", "ID"))
-                self.stateComboBox.setItemText(13, _translate("MainWindow", "IL"))
-                self.stateComboBox.setItemText(14, _translate("MainWindow", "IN"))
-                self.stateComboBox.setItemText(15, _translate("MainWindow", "IA"))
-                self.stateComboBox.setItemText(16, _translate("MainWindow", "KS"))
-                self.stateComboBox.setItemText(17, _translate("MainWindow", "KY"))
-                self.stateComboBox.setItemText(18, _translate("MainWindow", "LA"))
-                self.stateComboBox.setItemText(19, _translate("MainWindow", "ME"))
-                self.stateComboBox.setItemText(20, _translate("MainWindow", "MD"))
-                self.stateComboBox.setItemText(21, _translate("MainWindow", "MA"))
-                self.stateComboBox.setItemText(22, _translate("MainWindow", "MI"))
-                self.stateComboBox.setItemText(23, _translate("MainWindow", "MN"))
-                self.stateComboBox.setItemText(24, _translate("MainWindow", "MS"))
-                self.stateComboBox.setItemText(25, _translate("MainWindow", "MO"))
-                self.stateComboBox.setItemText(26, _translate("MainWindow", "MT"))
-                self.stateComboBox.setItemText(27, _translate("MainWindow", "NE"))
-                self.stateComboBox.setItemText(28, _translate("MainWindow", "NV"))
-                self.stateComboBox.setItemText(29, _translate("MainWindow", "NH"))
-                self.stateComboBox.setItemText(30, _translate("MainWindow", "NJ"))
-                self.stateComboBox.setItemText(31, _translate("MainWindow", "NM"))
-                self.stateComboBox.setItemText(32, _translate("MainWindow", "NY"))
-                self.stateComboBox.setItemText(33, _translate("MainWindow", "NC"))
-                self.stateComboBox.setItemText(34, _translate("MainWindow", "ND"))
-                self.stateComboBox.setItemText(35, _translate("MainWindow", "OH"))
-                self.stateComboBox.setItemText(36, _translate("MainWindow", "OK"))
-                self.stateComboBox.setItemText(37, _translate("MainWindow", "OR"))
-                self.stateComboBox.setItemText(38, _translate("MainWindow", "PA"))
-                self.stateComboBox.setItemText(39, _translate("MainWindow", "RI"))
-                self.stateComboBox.setItemText(40, _translate("MainWindow", "SC"))
-                self.stateComboBox.setItemText(41, _translate("MainWindow", "SD"))
-                self.stateComboBox.setItemText(42, _translate("MainWindow", "TN"))
-                self.stateComboBox.setItemText(43, _translate("MainWindow", "TX"))
-                self.stateComboBox.setItemText(44, _translate("MainWindow", "UT"))
-                self.stateComboBox.setItemText(45, _translate("MainWindow", "VT"))
-                self.stateComboBox.setItemText(46, _translate("MainWindow", "VA"))
-                self.stateComboBox.setItemText(47, _translate("MainWindow", "WA"))
-                self.stateComboBox.setItemText(48, _translate("MainWindow", "WV"))
-                self.stateComboBox.setItemText(49, _translate("MainWindow", "WI"))
-                self.stateComboBox.setItemText(50, _translate("MainWindow", "WY"))
+                for stateNum in range(len(stateList)): #for each state - add to combo box
+                        self.stateComboBox.setItemText(stateNum, _translate("MainWindow", stateList[stateNum]))
                 self.searchButton.setText(_translate("MainWindow", "Search"))
                 self.infoLabel.setText(_translate("MainWindow", "Enter your city and state"))
-                self.highTempLabel_1.setText(_translate("MainWindow", "99°"))
-                self.UVLabel.setText(_translate("MainWindow", "3/10"))
-                self.percipLevelLabel_1.setText(_translate("MainWindow", "24%"))
-                self.UVLabel_2.setText(_translate("MainWindow", "3/10"))
-                self.percipLevelLabel_4.setText(_translate("MainWindow", "24%"))
-                self.day3_date.setText(_translate("MainWindow", "Mon 23"))
-                self.day5_date.setText(_translate("MainWindow", "Wed 25"))
-                self.percipLevelLabel_5.setText(_translate("MainWindow", "24%"))
-                self.weatherMain_4.setText(_translate("MainWindow", "Partly Cloudy"))
-                self.day2_date.setText(_translate("MainWindow", "Sun 22"))
-                self.weatherMain_1.setText(_translate("MainWindow", "Partly Cloudy"))
-                self.percipLevelLabel_2.setText(_translate("MainWindow", "24%"))
-                self.UVLabel_5.setText(_translate("MainWindow", "3/10"))
-                self.weatherMain_2.setText(_translate("MainWindow", "Partly Cloudy"))
-                self.weatherMain_5.setText(_translate("MainWindow", "Partly Cloudy"))
-                self.highTempLabel_5.setText(_translate("MainWindow", "99°"))
-                self.highTempLabel_3.setText(_translate("MainWindow", "99°"))
-                self.lowTempLabel_2.setText(_translate("MainWindow", "/66°"))
-                self.UVLabel_3.setText(_translate("MainWindow", "3/10"))
-                self.weatherMain_3.setText(_translate("MainWindow", "Partly Cloudy"))
-                self.percipLevelLabel_3.setText(_translate("MainWindow", "24%"))
-                self.highTempLabel_4.setText(_translate("MainWindow", "99°"))
-                self.UVLabel_4.setText(_translate("MainWindow", "3/10"))
-                self.lowTempLabel_4.setText(_translate("MainWindow", "/66°"))
-                self.lowTempLabel_5.setText(_translate("MainWindow", "/66°"))
-                self.day4_date.setText(_translate("MainWindow", "Tue 24"))
-                self.lowTempLabel_3.setText(_translate("MainWindow", "/66°"))
-                self.day1_date.setText(_translate("MainWindow", "Sat 21"))
-                self.highTempLabel_2.setText(_translate("MainWindow", "99°"))
-                self.lowTempLabel_1.setText(_translate("MainWindow", "/66°"))
                 self.cityTE.setPlaceholderText(_translate("MainWindow", "City"))
                 self.reset_button.setText(_translate("MainWindow", "Reset"))
-                
-                
+
                 self.searchButton.clicked.connect(self.get_lat_lon) #when search button is clicked, run get_lat_lon (line 1312)
                 self.reset_button.clicked.connect(self.reset_screen) #when reset button is clicked, run reset_screen (line 1455)        
         #-------------------------------------(End) Code to generate UI------------------------------------------
@@ -1340,8 +1197,8 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.state = str(self.stateComboBox.currentText()) #get state from combo box
                 self.location_r = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={self.city},{self.state},US&limit=1&appid={API_KEY}') #request to get location info (city,state,latittude,longitude)
                 if(self.location_r.ok): #if the request is a [200]
-
                         self.location_info = json.loads(self.location_r.text) #jsonify the location request for parsing
+
                         if(self.location_info == []): #if the api returns blank (bad info)
                                 
                                 self.infoLabel.setText("Invalid city or state") #show the user they mistyped
@@ -1349,55 +1206,31 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                                 return #allow the user to enter info again
 
                         self.infoLabel.setText("Getting weather forecast...") #show user it is getting the forecast
-<<<<<<< HEAD:5_Day_Forcast.py
+
                         QtWidgets.QApplication.processEvents()
                         print(self.location_info) #test print
-=======
-                        QtWidgets.QApplication.processEvents() #update UI
-<<<<<<< HEAD
-                        #print(self.location_info) #test print
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
 
-=======
-                        
->>>>>>> 7e0416ef65bcf17cc06278dbd4a3860c379a7dac
+                        QtWidgets.QApplication.processEvents() #update UI
+
                         self.lat = (self.location_info[0]['lat']) #get lattitiude
                         self.lon = (self.location_info[0]['lon']) #get longitutude
                         self.city = (self.location_info[0]['name']) #official city
                         self.state = (self.location_info[0]['state']) #coutry
 
-<<<<<<< HEAD:5_Day_Forcast.py
-                        self.get_forecast(self.lat, self.lon) #send lat and lon to get weather 
-
-        def get_forecast(self, lat, lon):
-=======
-                        self.get_forcast() #send lat and lon to get forecast 
+                        self.get_forcast() #send lat and lon to get weather 
 
         def get_forcast(self): #send request to weather API to get forecast
-<<<<<<< HEAD
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
-                #print(lat, lon)
-=======
->>>>>>> 7e0416ef65bcf17cc06278dbd4a3860c379a7dac
-                self.weather_r = requests.get(f'https://api.openweathermap.org/data/2.5/onecall?lat={self.lat}&lon={self.lon}&exclude=current,hourly,minutely&appid={API_KEY}&units=imperial')
 
+                self.weather_r = requests.get(f'https://api.openweathermap.org/data/2.5/onecall?lat={self.lat}&lon={self.lon}&exclude=current,hourly,minutely&appid={API_KEY}&units=imperial')
                 self.weather_info = json.loads(self.weather_r.text) #jsonify the api info
-                
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.forecast_raw = [] #empty list to store daily forecast
-                
                 for day_number in range(6): # Add all 5 days to a list to be sent out for formatting
-                        #print(f'adding day {day_number}')
-=======
-                self.forcast_raw = [] #empty list to store daily forecast
-                
-                for day_number in range(6): # Add all 5 days to a list to be sent out for formatting
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
-                        if(day_number == 0): #skip the fist day of forecast (today)
-                                continue
-                        self.forecast_raw.append(self.weather_info['daily'][day_number])
-                        
-                self.seperate_days(self.forecast_raw) #run spereate days function
+                        self.forcast_raw = [] #empty list to store daily forecast
+                        for day_number in range(6): # Add all 5 days to a list to be sent out for formatting
+                                if(day_number == 0): #skip the fist day of forecast (today)
+                                        continue
+                                self.forecast_raw.append(self.weather_info['daily'][day_number])
+                        self.seperate_days(self.forecast_raw) #run spereate days function
                 
         def seperate_days(self, dayList): #store the data in lists for corresponding day number
                 
@@ -1408,20 +1241,18 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.images = []
                 self.percips = []
                 self.uvis = []
-                
-                #print(dayList)
-                
+
                 for day in dayList: #go through each day in the list
                         day_info = day
                         
                         unix_dt = day_info['dt'] #dateTime in unix, to be converted
                         high_temp = round(float(day_info['temp']['max'])) #highest temp
                         low_temp = round(float(day_info['temp']['min'])) #lowest temp
-<<<<<<< HEAD:5_Day_Forcast.py
+
                         main_weather = day_info['weather'][0]['description'] #main weather forecast description
-=======
+
                         main_weather = (day_info['weather'][0]['description']).title() #main weather forecast description
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
+
                         image = (f"https://openweathermap.org/img/wn/{day_info['weather'][0]['icon']}@2x.png")
                         precip = round(float(day_info['pop'])*100) #probability of precipitation 0 - 100
                         uvi = round(float(day_info['uvi'])) #UV index out of 10
@@ -1497,24 +1328,15 @@ class Ui_MainWindow(object): #houses all of the functions/UI for the application
                 self.UVLabel_4.setText(f"{self.uvis[3]}/10")
                 self.UVLabel_5.setText(f"{self.uvis[4]}/10")
                 
-<<<<<<< HEAD:5_Day_Forcast.py
                 self.forecastWidget.show()
-=======
-                self.forcastWidget.show()
                 self.reset_button.show()
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
-                
+
                 self.infoLabel.setText(f"Here is your forecast!\n{self.city}, {self.state}\n\n{self.lat}, {self.lon}")
                 
                 QtWidgets.QApplication.processEvents()
-<<<<<<< HEAD:5_Day_Forcast.py
-        
-                #print(len(self.forecast_raw))
-=======
->>>>>>> 9dacd70a5ecf72555e155c268a35aeb3f03f0b98:5_Day_Forecast.py
                 
         def reset_screen(self): #reset all widgets to how they were at the start
-                self.forcastWidget.hide()
+                self.forecastWidget.hide()
                 self.infoLabel.setText("Enter your city and state")
                 self.stateComboBox.setCurrentIndex(0)
                 self.cityTE.setText("")
